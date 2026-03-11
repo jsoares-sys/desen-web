@@ -1,66 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 2</title>
+    <title>Cadastro</title>
 </head>
-
 <body>
-    <header>
-        <h1>Meu blog de viagens</h1>
-        <nav>
-            <ul>
-                <li><a href="http://home">Home</a></li>
-                <li><a href="http://sobremim">Sobre mim</a></li>
-                <li><a href="http://viagens">Viagens</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <article>
-            <h2>
-                Descobrindo as Cataratas do Iguaçu
-            </h2>
-            <time datetime="2026-02-26">26 de Fevereiro de 2026</time>
-            <p>
-                Cataratas do Iguaçu foi um dos lugares mais impressionantes que eu já visitei. Quando cheguei e ouvi o
-                som das quedas d’água antes mesmo de vê-las, já senti que seria algo grandioso. Ao me aproximar das
-                passarelas, a imensidão das cataratas me deixou sem palavras — são dezenas de quedas espalhadas por uma
-                paisagem verde e viva. A força da água caindo cria uma névoa constante e, em alguns momentos, forma
-                arco-íris que deixam tudo ainda mais mágico.
-            </p>
-            <p>Caminhar pelas trilhas foi uma experiência intensa, principalmente ao chegar perto da Garganta do Diabo,
-                onde a potência da natureza é ainda mais evidente. A sensação é de estar diante de algo muito maior do
-                que nós. O contato com a natureza, o som da água e a energia do lugar trazem uma mistura de adrenalina e
-                paz ao mesmo tempo. As Cataratas do Iguaçu não são apenas bonitas — elas são imponentes e inesquecíveis,
-                um espetáculo natural que realmente marca a memória.</p>
 
+    <form>
+        <fieldset>
+            <legend>Crie sua Conta</legend>
 
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome"><br><br>
 
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
 
+            <label for="senha">Senha:</label><br>
+            <input type="password" id="senha" name="senha" minlength="8" required><br><br>
 
-            <figure>
-                <img src="cataratas.jpeg" width="200" height="200" alt="T-Rex">
-                <figcaption>Cataratas do Iguaçu, Brasil</figcaption>
-            </figure>
+            <strong>Gênero</strong><br>
+            <input type="radio" id="masculino" name="genero" value="Masculino">
+            <label for="masculino">Masculino</label><br>
 
-            <aside>
-                <h3>Posts relacionados</h3>
-                <ul>
-                    <li><a href="#">Cachoeira da Fumaça - Chapada Diamantina, Bahia</a></li>
-                    <li><a href="#">Rei do Prata - Chapada dos Veadeiros, Goiás</a></li>
-                    <li><a href="#">Cânion de Furnas - Capitólio, Minas Gerais</a></li>
-                </ul>
-            </aside>
+            <input type="radio" id="feminino" name="genero" value="Feminino">
+            <label for="feminino">Feminino</label><br><br>
 
-            <footer>
-                <p>
-                    &copy; 2026 some copyright message.
-                </p>
-            </footer>
-    </main>
+            <label for="biografia">Biografia:</label><br>
+            <textarea id="biografia" name="biografia" rows="4" placeholder="Fale um pouco sobre você..."></textarea><br><br>
+
+            <input type="checkbox" id="termos" name="termos" required>
+            <label for="termos">Eu concordo com os termos de uso</label><br><br>
+
+            <button type="submit">Cadastrar</button>
+        </fieldset>
+    </form>
+
 </body>
-
 </html>
